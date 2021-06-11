@@ -1,4 +1,4 @@
-alias google="~/bin/google-search.sh"
+alias google="~/bin/google-search"
 alias killserver="~/bin/killserver"
 alias hgrep="history | grep "
 alias psgrep="ps aux | grep "
