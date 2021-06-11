@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PORT=${1}
+PROCESS=${2}
+
+if [ $PORT == "help" ] || [ $PORT == "-h" ] || [ $PORT == "--help" ]; then
+	echo "Command: killserver <PORT> <PROCESS>"
+	exit 1
+fi
+
+if kill -9 $(lsof -i :${PORT} |grep ${PROCESS}|awk -v process=${PROCESS} '$1==process {print $2}') > /dev/null 2>&1; then
+	echo "${PROCESS} killed successfully"
+else
+	echo "Process does not exist"
+fi
+
