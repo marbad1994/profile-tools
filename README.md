@@ -64,3 +64,8 @@ Seperate your search words as usual, for example: this is my search string, and 
 #### killserver
 
 Uses lsof to find a specific process name with a specific port and kills it.
+
+## Installation
+```
+make install
+```
